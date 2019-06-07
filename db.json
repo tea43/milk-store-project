@@ -1,18 +1,18 @@
 [
   {
-    id: 1,
-    name: "Kefirchik",
-    volume: 1500,
-    offense: "25%",
-    sause:
+    "id": 1,
+    "name": "Kefirchik",
+    "volume": 1500,
+    "offense": "25%",
+    "sause":
       "https://previews.dropbox.com/p/thumb/AAdZ6yIWV0wr7fUppf1kU3BR5sBnlb-PS0vDrVV7WQSpkhFDKCkrVchJVS0hftMWr-r2Z1ua_6ZlMKzXMdvlWT3OYBnAJGCbomyeBpkVt57CTWJsef_AkkGg7mRdNNJbIJihILuaRyz0CP0hWFgbkHQdQ7xFSoG5Wt4UzV3rXiGOQb7WA21K94_GBHrYNYOy2NonzcWgZDyI1SYG0CFJ-z2_aIxRqiSiPZnOTAturp9rv8m_4tXSySPO8FxBC48SeymONCMzKalSAH_3d-ZU5nQ2VTv-fIZG9QDwtI2HWnSUXwwHjAtXf9DH7gjV6pE_X4gQzf7m9koi0XJ19kV7pS6xzljIsN3hkiLGuzoCqHcJHg/p.jpeg?fv_content=true&size_mode=5"
   },
   {
-    id: 2,
-    name: "Smetanka",
-    volume: 1000,
-    offense: "20%",
-    sause:
+    "id": 2,
+    "name": "Smetanka",
+    "volume": 1000,
+    "offense": "20%",
+    "sause":
       "https://previews.dropbox.com/p/thumb/AAdzXPCc7zeyjmoKfXtWo2JAdqTc7Mv0Dv4hX-7boWarPpScSjYjQe10bqyh85cCpCGRfBubjNQjtBWc2NPk9QcdojDbNCVUmFXpJsnORKaNtpzoOBYd98AXZCSRGhmPq5klFxTFjh0mo3akeEotthi19GvNIO_8RvvZNWRhB42mrNI-yKzcXQHUNU_FecBxrUOZ-7h5huHF9urmAOcyfAqz9BG49SAIf1eZhJgtk1GwFAHaM9rrMBnVfush3u8zzSHqBsuRS7Yh_nYbtd15EUCuTvGshSTvDwZ2-r5K9HMnrXc3qbDA86ijBA9yFtEgGyhTr733v0RMoxNJyRjgZKIVOgmYxlb20T-QCA-IUpfubA/p.jpeg?fv_content=true&size_mode=5"
   }
 ]
