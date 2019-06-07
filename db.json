@@ -1,4 +1,5 @@
-[
+{
+  "posts": [
   {
     "id": 1,
     "name": "Kefirchik",
@@ -15,4 +16,8 @@
     "sause":
       "https://previews.dropbox.com/p/thumb/AAdzXPCc7zeyjmoKfXtWo2JAdqTc7Mv0Dv4hX-7boWarPpScSjYjQe10bqyh85cCpCGRfBubjNQjtBWc2NPk9QcdojDbNCVUmFXpJsnORKaNtpzoOBYd98AXZCSRGhmPq5klFxTFjh0mo3akeEotthi19GvNIO_8RvvZNWRhB42mrNI-yKzcXQHUNU_FecBxrUOZ-7h5huHF9urmAOcyfAqz9BG49SAIf1eZhJgtk1GwFAHaM9rrMBnVfush3u8zzSHqBsuRS7Yh_nYbtd15EUCuTvGshSTvDwZ2-r5K9HMnrXc3qbDA86ijBA9yFtEgGyhTr733v0RMoxNJyRjgZKIVOgmYxlb20T-QCA-IUpfubA/p.jpeg?fv_content=true&size_mode=5"
   }
-]
+],
+  "profile": {
+    "name": "typicode"
+  }
+}
