@@ -2,6 +2,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+How to init: 
+1. install npm + node js
+2. in terminal/console : 
+    - npm init
+    - npm install create-react-app
+    - npm install
+    - npm start
+    - navigate to locahost:3000
+
+
+## Available Scripts
+
 In the project directory, you can run:
 
 ### `npm start`
