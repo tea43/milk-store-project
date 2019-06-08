@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
+import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css";
 
 class App extends Component {
@@ -14,9 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "https://my-json-server.typicode.com/tea43/milk-store-project/posts"
-    )
+    fetch("https://my-json-server.typicode.com/tea43/milk-store-project/posts")
       .then(response => response.json())
       .then(posts => this.setState({ Data: posts }));
   }
@@ -39,7 +38,9 @@ class App extends Component {
         <h1 className="f1">Offensive Milk Store</h1>
         <SearchBox searchChange={this.onSearchChange} />
         <Scroll>
-          <CardList Data={filteredProducts} />
+          <ErrorBoundry>
+            <CardList Data={filteredProducts} />
+          </ErrorBoundry>
         </Scroll>
       </div>
     );
