@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      "https://my-json-server.typicode.com/eklyagin/offensive-milk-store/posts"
+      "https://my-json-server.typicode.com/tea43/milk-store-project/posts"
     )
       .then(response => response.json())
       .then(posts => this.setState({ Data: posts }));
