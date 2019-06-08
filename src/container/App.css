@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Jerantet1977 Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Jerantet1977 Regular"), url("Jerantet1977.woff") format("woff");
+}
+
+h1 {
+  font-family: "Jerantet1977 Regular";
+  font-weight: 200;
+}
