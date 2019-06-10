@@ -1,12 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 import App from "./container/App";
 import "./index.css";
 import "tachyons";
+import { searchData } from "./reducers";
 import * as serviceWorker from "./serviceWorker";
 
+const store = createStore(searchData);
+
 ReactDOM.render(
-    <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );
 

@@ -1,16 +1,29 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css";
+import { setSearchFiled } from "../actions";
+
+const mapStateToProps = state => {
+  return {
+    searchField: state.searchField
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onSearchChange: event => dispatch(setSearchFiled(event.target.value))
+  };
+};
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      Data: [],
-      searchfield: ""
+      Data: []
     };
   }
 
@@ -20,15 +33,12 @@ class App extends Component {
       .then(posts => this.setState({ Data: posts }));
   }
 
-  onSearchChange = event => {
-    this.setState({ searchfield: event.target.value });
-  };
-
   render() {
+    const { searchField, onSearchChange } = this.props;
     const filteredProducts = this.state.Data.filter(Data => {
       return Data.name
         .toLowerCase()
-        .includes(this.state.searchfield.toLowerCase());
+        .includes(searchField.toLowerCase());
     });
     if (!this.state.Data.length) {
       return <h1 className="tc">Loading...</h1>;
@@ -36,7 +46,7 @@ class App extends Component {
     return (
       <div className="tc">
         <h1 className="f1">Offensive Milk Store</h1>
-        <SearchBox searchChange={this.onSearchChange} />
+        <SearchBox searchChange={onSearchChange} />
         <Scroll>
           <ErrorBoundry>
             <CardList Data={filteredProducts} />
@@ -47,4 +57,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
