@@ -5,7 +5,7 @@ import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css";
-import { setSearchFiled, requestData } from "../actions";
+import { setSearchFiled, requestData } from "../redux/actions";
 
 const mapStateToProps = state => {
   return {

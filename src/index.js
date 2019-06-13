@@ -7,7 +7,7 @@ import thunkMiddleware from "redux-thunk";
 import App from "./container/App";
 import "./index.css";
 import "tachyons";
-import { searchData, requestData } from "./reducers";
+import { searchData, requestData } from "./redux/reducers";
 import * as serviceWorker from "./serviceWorker";
 
 const logger = createLogger();
