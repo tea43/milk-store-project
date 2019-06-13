@@ -5,42 +5,36 @@ import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css";
-import { setSearchFiled } from "../actions";
+import { setSearchFiled, requestData } from "../actions";
 
 const mapStateToProps = state => {
   return {
-    searchField: state.searchField
+    searchField: state.searchData.searchField,
+    Data: state.requestData.Data,
+    isPending: state.requestData.isPending,
+    error: state.requestData.error
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSearchChange: event => dispatch(setSearchFiled(event.target.value))
+    onSearchChange: event => dispatch(setSearchFiled(event.target.value)),
+    onRequestData: () => dispatch(requestData())
   };
 };
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      Data: []
-    };
-  }
-
+  
   componentDidMount() {
-    fetch("https://my-json-server.typicode.com/tea43/milk-store-project/posts")
-      .then(response => response.json())
-      .then(posts => this.setState({ Data: posts }));
+    this.props.onRequestData();
   }
 
   render() {
-    const { searchField, onSearchChange } = this.props;
-    const filteredProducts = this.state.Data.filter(Data => {
-      return Data.name
-        .toLowerCase()
-        .includes(searchField.toLowerCase());
+    const { searchField, onSearchChange, Data, isPending } = this.props;
+    const filteredProducts = Data.filter(Data => {
+      return Data.name.toLowerCase().includes(searchField.toLowerCase());
     });
-    if (!this.state.Data.length) {
+    if (isPending) {
       return <h1 className="tc">Loading...</h1>;
     }
     return (
